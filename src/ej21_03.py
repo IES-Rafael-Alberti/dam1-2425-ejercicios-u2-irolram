@@ -12,7 +12,7 @@ def pedir_numeros():
 def comprobar_num2(num2):
 
     while num2 == 0:
-        num2 = int(input("Dame otro número: "))
+        num2 = int(input("ERROR, Dame otro número: "))
     return num2
     
 def division_de_numeros(num1, num2):
