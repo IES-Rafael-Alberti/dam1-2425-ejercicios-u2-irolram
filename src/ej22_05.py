@@ -19,10 +19,15 @@ def preguntar_cantidad_invertir():
 
 def capital(cantidad, anios, interes):
 
-    
+    for i in range(1, anios +1 ):
+        cantidad *= (1 + interes)
+        print("año {} su inversión es de {}".format(cont,cantidad))
+        
 
 def main():
 
+    cant, anios, interes =preguntar_cantidad_invertir()
+    capital(cant, anios, interes)
 
 
 
