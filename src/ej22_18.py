@@ -18,33 +18,33 @@ def suma_num(num):
 
     return guardar_num, contador
 
-
-def acabar_programa(suma: int,contador,par):
+def acabar_programa(contador_pares):
     
-    print("La suma de los digitos son: {}\n El numero es: {}\n Los numeros pares son {}".format(suma, contador, par))
+    print("Cantidad de números pares ingresados: {}".format(contador_pares))
 
 
-def numeros_pares(num):
-
-    lista_par = ""
-    
-    if num % 2 == 0:
-        lista_par += str(num) + ", "
-        return num
+def numeros_pares(num) -> bool:
+             
+        return num % 2 == 0
 
 
 def main():
 
+    contador_pares = 0
     num = intro_numero()
+    while num != -1:
+
+        suma = suma_num(num)
+        print(f"La suma de los dígitos de {num} es: {suma}")
 
 
-    suma, contador = suma_num(num)
-    par = numeros_pares(num)
+        if numeros_pares(num):
+            
+            contador_pares += 1
+        
+        num = intro_numero()
 
-    while str(num) != ("-1"):
-        intro_numero()
-    else: 
-        acabar_programa(suma,contador,par)
+    acabar_programa(contador_pares)
     
 
 
