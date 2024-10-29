@@ -2,16 +2,25 @@
 
 from ej22_15 import intro_numero
 
-def ordenar_lista(num):
+def numero_mayor(num):
 
+    lista_num = 0
     
     while num != 0:
+
+        if num < lista_num: 
+
+            num = int(input("Introduce un numero entero: ")) 
         
-        num = int(input("Introduce un numero entero: "))
-        lista_num = []
+        if num > lista_num:
+                lista_num = num
+                num = int(input("Introduce un numero entero: "))
 
         if num == 0:
             return lista_num
+        
+        
+                
         
             
 
@@ -20,7 +29,7 @@ def ordenar_lista(num):
 def main():
     num = intro_numero()
 
-    lista = ordenar_lista(num)
+    lista = numero_mayor(num)
 
     print("El número mayor fue: {}".format(lista))
 
