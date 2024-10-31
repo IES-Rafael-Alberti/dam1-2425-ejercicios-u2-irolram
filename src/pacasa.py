@@ -43,7 +43,7 @@ def pausa(tiempo = 0, tecla_enter = False, limpiar = True):
     # o una pausa esperando a que el usuario "\nPresione ENTER para continuar..."
     # Además, dependiendo del parámetro opcional limpiar debe limpiar la consola o no
     
- pass   
+   
 
 def mostrar_titulo(seccion: int, intentos: int = 0):
     """
@@ -104,7 +104,7 @@ def evaluar_diferencia(numero: int, numero_oculto: int, frio: int, caliente: int
     """
 	# Realizar la función según la documentación que observáis
 
-pass    
+    
     
 
     
@@ -252,7 +252,7 @@ def configurar_pistas(minimo: int, maximo: int) -> tuple:
     #    (*ERROR* La diferencia para la pista CALIENTE debe estar entre {minimo} y {maximo}!)
 
     return frio, caliente
-pass
+
 
 def configurar_intentos(rango_numero_oculto) -> int:
     """
@@ -276,7 +276,7 @@ def configurar_intentos(rango_numero_oculto) -> int:
     #    (*ERROR* El número de intentos no puede ser superior al 10% del rango del número oculto!)
 
     return intentos
-pass
+
 
 
 def configurar_juego() -> tuple:
@@ -290,12 +290,12 @@ def configurar_juego() -> tuple:
     limpiar_pantalla()
     mostrar_titulo(4)
     
-    minimo, maximo = pedir_numero_usuario(minimo, maximo)
+    minimo, maximo = pedir_numero_usuario("")
     frio, caliente = 
     intentos = 
 
     return minimo, maximo, intentos, frio, caliente
-pass
+
 
 def mostrar_configuracion(minimo, maximo, intentos, frio, caliente):
     """
@@ -324,18 +324,20 @@ def mostrar_menu():
     Muestra el menú principal del juego.
     """
 	# Corregir posibles errores...
+    limpiar_pantalla()
     mostrar_titulo()
-    input("1. Jugar.")
-    input("2. Configurar.")
-    input("3. Mostrar configuración.")
+    input("1. Jugar.\n")
+    input("2. Configurar.\n")
+    input("3. Mostrar configuración.\n")
     input("4. Salir.\n")
-	limpiar_pantalla()
+	
 
 
-def comprobar_opcion()
+def comprobar_opcion(opcion):
 	# Crear la documentación recomendada para esta función
+    
     return 1 <= opcion <= 4
-pass
+
 
 def elegir_opcion_menu() -> int:
     """
@@ -345,18 +347,22 @@ def elegir_opcion_menu() -> int:
         int: La opción elegida por el usuario.
     """
 	# Corregir posibles errores...
+    
+
     opcion_correcta = False
 
     while not opcion_correcta:
+
         mostrar_menu()
 
-	    opcion = pedir_numero_usuario("Elije => ")
-            
-		opcion_correcta = comprobar_opcion(opcion)
-	
-		if not opcion_correcta:
-			mostrar_error(f"Opción {opcion} incorrecta! (1-4)")
-pass
+        opcion = pedir_numero_usuario("Elige una opción (1-4): ")
+
+        opcion_correcta = comprobar_opcion(opcion)
+
+        if not opcion_correcta:
+            mostrar_error(f"Opción {opcion} incorrecta! (1-4)")
+
+    return opcion
 
 
 def jugar(numero_oculto: int, intentos: int, frio: int, caliente: int):
@@ -388,7 +394,7 @@ def jugar(numero_oculto: int, intentos: int, frio: int, caliente: int):
     pausa
 
 
-def genera_numero_oculto():
+def genera_numero_oculto(minimo, maximo):
     """
         Función que le ingresan los valores maximos y minimos para retornarle el número oculto
 
@@ -439,13 +445,14 @@ def main():
     salir = False
 
     while salir:
+
         opcion = elegir_opcion_menu()
 
         if opcion == 1:
-            numero_oculto = genera_numero_oculto()
+            numero_oculto = genera_numero_oculto(minimo, maximo)
             jugar(numero_oculto, intentos, frio, caliente)
         elif opcion == 2:
-            minimo, maximo, intentos, frio, caliente = configurar_juego
+            minimo, maximo, intentos, frio, caliente = configurar_juego()
         elif opcion == 3:
             mostrar_configuracion()
         else:
