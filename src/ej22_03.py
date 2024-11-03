@@ -1,6 +1,6 @@
 #Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
 
-def num_positivo():
+def num_positivo()-> int:
 
     num = int(input("Introduce un número positivo: "))
 
@@ -13,7 +13,12 @@ def comprobar_posi(num):
     return num
 
 def numeros_impares(num): 
+    """
+    Genera e imprime todos los números impares desde 1 hasta el número proporcionado.
 
+    Args:
+        num (int): El límite superior para generar números impares.
+    """
     guardar_num = ""
 
     if num % 2 == 0:

@@ -7,7 +7,15 @@ def edad_cliente():
     return edad
 
 def precio_entrada(edad):
+    """
+    Calcula el precio de entrada en función de la edad.
 
+    Args:
+        edad (int): Edad del usuario.
+
+    Returns:
+        str: Mensaje con el precio de entrada.
+    """
     if edad < 4:
         return print("Su entrada es gratis!!")
     elif edad > 4 and edad < 18:

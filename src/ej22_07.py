@@ -2,7 +2,7 @@
 
 from ej21_04 import pedir_num
 
-def tabla_multiplicar(num):
+def tabla_multiplicar(num)->int:
     cont = 0
     for i in range(0, 10 + 1):
         print("{} * {} = {} ".format(num, cont, num * i))

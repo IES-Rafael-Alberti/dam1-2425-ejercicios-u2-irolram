@@ -8,6 +8,14 @@ def preguntas():
     return edad, ingresos
 
 def comprobar_casos(edad,ingresos):
+    """
+    Verifica si el número ingresado y la cantidad ingresada es para tributar o no
+
+    Args: num int: Número que se verificará
+
+    return: None
+    
+    """
     if edad > 16 and ingresos > 1000:
         print("A tributar")
     else:

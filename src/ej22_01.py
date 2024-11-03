@@ -1,6 +1,6 @@
 #Escribir un programa que pida al usuario una palabra y la muestre por pantalla 10 veces.
 
-def pedir_palabra():
+def pedir_palabra()->str:
 
     pal = input("Introduce una palabra: ")
 

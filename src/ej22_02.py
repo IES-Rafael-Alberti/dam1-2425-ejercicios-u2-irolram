@@ -4,7 +4,12 @@ from ej21_01  import preguntar_edad
 
 
 def todos_anios_cumplido(edad):
-
+    """
+    Muestra todos los años que el usuario ha cumplido hasta su edad actual.
+    
+    Args:
+        edad (int): La edad del usuario.
+    """
     guardar_edad = ""
 
     for i in range(1, edad + 1):

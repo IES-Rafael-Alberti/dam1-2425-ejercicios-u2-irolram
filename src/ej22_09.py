@@ -6,7 +6,7 @@ def pedir_contra():
 
     return contra.lower()
 
-def comprobar_contra(contra):   
+def comprobar_contra(contra)->str:   
 
     contraseña = "contraseña"
     while contra != contraseña:

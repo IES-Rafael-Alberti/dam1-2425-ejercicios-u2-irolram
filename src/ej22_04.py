@@ -2,7 +2,13 @@
 
 from ej22_03 import num_positivo
 
-def cuenta_atras(num):
+def cuenta_atras(num: int):
+    """
+    Hace una cuenta atrás desde un número dado hasta cero e imprime los números.
+
+    Args:
+        num (int): El número desde el cual comenzar la cuenta atrás.
+    """    
     
     primer_numero = num
     atras = ""

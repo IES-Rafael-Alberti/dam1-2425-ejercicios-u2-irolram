@@ -14,7 +14,13 @@ def puntuacion():
     return punt
 
 def calculo_puntuacion(punt):
+    """
+    Calcula el salario basado en la puntuación e imprime el resultado.
 
+    Args:
+        punt (float): La puntuación de desempeño del usuario.
+    """
+    
     if punt == 0.0:
         punt = (2400 * 0.0) + 2400
         return print("Has ganado {}€ y tú Nivel es Inaceptable, mejora".format(punt))

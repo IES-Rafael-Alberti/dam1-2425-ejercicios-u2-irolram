@@ -7,6 +7,14 @@ def pedir_num():
     return num
 
 def comprobar_par(num):
+    """
+    Verifica si un número es par o no, si es par retornara que es par, sino, dira que es impar
+
+    Args: num int: Número que se verificará
+
+    return: None
+    
+    """
     if num % 2 == 0:
         return print("El número es par")
     else:

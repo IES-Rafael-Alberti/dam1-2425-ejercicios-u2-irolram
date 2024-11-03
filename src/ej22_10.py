@@ -6,7 +6,16 @@ def introducir_numero():
 
     return num
 
-def comprobar_primo(num):
+def comprobar_primo(num)->bool:
+    """
+    Comprueba si un número es primo.
+
+    Args:
+        num (int): El número a comprobar.
+
+    Returns:
+        bool: True si el número es primo, False en caso contrario.
+    """
     if num < 2:
         return False
     for i in range(2, num):

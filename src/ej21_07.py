@@ -8,13 +8,23 @@ Entre 35000€ y 60000€	30%
 Más de 60000€	45%"""
 
 def pregunta_renta():
-
+    """
+    Solicita al usuario que introduzca su renta anual.
+    
+    Returns:
+        float: El valor de la renta ingresado.
+    """
     renta =float(input("Introduzca su renta: "))
 
     return renta
 
 def tipo_renta(renta):
+    """
+    Determina y muestra el tipo impositivo en función de la renta ingresada.
 
+    Args:
+        renta (float): La renta anual del usuario.
+    """
     if renta < 10000:
         return print("Su impositivo es de un 5%")
     elif renta > 10000 and renta < 20000:

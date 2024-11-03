@@ -3,7 +3,12 @@
 from ej21_04 import pedir_num
 
 def triangulo_letal(num):
+    """
+    Imprime un triángulo rectángulo de altura num.
 
+    Args:
+        num (int): Altura del triángulo.
+    """
     for i in range(1, num):
         print("*" * i)
 

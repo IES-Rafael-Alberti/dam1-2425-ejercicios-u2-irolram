@@ -8,7 +8,6 @@ def intro_palabra():
 
 def palabra_a_palabra(palabra):
 
-    
 
     for i in range(len(palabra)):
         print(palabra [i])

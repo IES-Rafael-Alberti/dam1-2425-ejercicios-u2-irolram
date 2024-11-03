@@ -4,10 +4,11 @@ from ej21_04 import pedir_num
 
 def triangulo_numeros(num):
 
-    for i in range(1, num + 1, 2):
+    for i in range(1, num + 1):
 
-        for i in range(num, -1, -1):
-
+        for j in range(1,i +1):
+            print(j, end=' ')  
+        print()
     
 
     

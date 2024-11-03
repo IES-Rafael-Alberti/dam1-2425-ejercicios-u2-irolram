@@ -9,7 +9,12 @@ cantidad *= 1 + interes / 100
 """
 
 def preguntar_cantidad_invertir():
+    """
+    Solicita al usuario la cantidad a invertir, el número de años y el interés anual.
 
+    Returns:
+        tuple: Contiene la cantidad a invertir (float), la cantidad de años (int) y el interés anual (float).
+    """
     cantidad = float(input("Ingrese la cantidad a invertir: "))
     anios = int(input("Ingrese la cantidad de años: "))
     interes = int(input("Introduce el interes anual: "))
@@ -18,6 +23,15 @@ def preguntar_cantidad_invertir():
 
 
 def capital(cantidad, anios, interes):
+    """
+    Calcula el capital acumulado durante un número de años dado un interés anual.
+
+    Args:
+        cantidad (float): La cantidad inicial a invertir.
+        anios (int): El número de años que se va a invertir.
+        interes (float): El interés anual expresado como una fracción (por ejemplo, 0.05 para 5%).
+    """
+
     cont = 0
     for i in range(1, anios +1 ):
         cont = cont + 1
